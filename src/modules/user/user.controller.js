@@ -39,7 +39,10 @@ router.post('/refreshtoken', auth(['User', 'admin']), userService.refreshtoken)
 router.patch('/banned', auth(['admin']), userService.banned_user)
 
 // Google OAuth Route use browser not postman 
-router.get("/google", passport.authenticate("google", { scope: ["profile", "email"] }));
+router.get("/google", passport.authenticate("google", { scope: ["profile", "email"] }),(req ,res, next)=>{
+console.log('google hit ')
+    res.status(200).json({success : true , msg:'google sigin hit'})
+});
 
 // Google OAuth Callback
 router.get("/google/callback", passport.authenticate("google", { failureRedirect: "/" }),
