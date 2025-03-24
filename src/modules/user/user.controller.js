@@ -45,7 +45,7 @@ router.get("/google", passport.authenticate("google", { scope: ["profile", "emai
 router.get("/google/callback", passport.authenticate("google", { failureRedirect: "/" }),
     (req, res) => {
         const token = jwt.sign({ id: req.user._id }, "SECRETKEY", { expiresIn: "1h" });
-        res.redirect(`https://search-app-backend-opal.vercel.app//user/googlelogin/${token}`); // Redirect to frontend
+        res.redirect(`https://search-app-backend-opal.vercel.app/user/googlelogin/${token}`); // Redirect to frontend
     }
 );
 
