@@ -14,7 +14,7 @@ export const multerLocal = () => {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    const uploadDir ='https://search-app-backend-opal.vercel.app/src/uploads'; // Adjust path if needed
+    const uploadDir = path.join(__dirname, '../temp/uploads'); // Adjust path if needed
     if (!fs.existsSync(uploadDir)) {
         fs.mkdirSync(uploadDir, { recursive: true }); // Ensure folder exists
     }
