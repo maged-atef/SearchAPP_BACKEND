@@ -281,7 +281,7 @@ export const resetPassword = asyncHandler(async (req, res, next) => {
     if (!user) {
         return next(new Error("User not found"));
     }
-    const hashedNewPassword = await bcrypt.hash(newPassword, 10);
+    const hashedNewPassword = bcrypt.hashSync(newPassword, 10);
     user.password = hashedNewPassword;
     user.otp = undefined;
     user.otpExpiry = undefined;
