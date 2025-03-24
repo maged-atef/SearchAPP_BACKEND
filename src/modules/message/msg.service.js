@@ -1,4 +1,5 @@
-import Message from '../../src/db/models/messageModel.js'
+
+import Message from '../../../src/db/models/messageModel.js'
 
 export const sendmsg =async (req ,res ,next)=>{
     const userid = req.user._id

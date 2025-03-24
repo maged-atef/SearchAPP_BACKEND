@@ -1,9 +1,9 @@
-import User from "../../src/db/models/user.model.js";
+import User from "../../../src/db/models/user.model.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { sendMail } from "../../service/email.js";
 import CryptoJS from "crypto-js";
-import application from '../../src/db/models/application.model.js'
+import application from '../../../src/db/models/application.model.js'
 import CLOUD from "../../service/cloudinary.js";
 
 

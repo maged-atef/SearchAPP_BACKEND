@@ -1,12 +1,16 @@
 
 import { sendMail } from "../../service/email.js";
-import Job from "../../src/db/models/job.model.js";
-import Company from "../../src/db/models/company.model.js";
+
 import mongoose from "mongoose";
-import User from "../../src/db/models/user.model.js";
+
 import exceljs from 'exceljs'
-import application from "../../src/db/models/application.model.js";
+
 import { addJobValidation } from "./jobValidation.js";
+import User from "../../db/models/user.model.js";
+import Job from "../../db/models/job.model.js";
+import company from '../../db/models/company.model.js'
+import application from "../../db/models/application.model.js";
+
 
 // *----------> Async Handler
 export const asyncHandler = (fn) => {

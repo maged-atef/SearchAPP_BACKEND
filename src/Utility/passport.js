@@ -2,7 +2,7 @@ import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import CryptoJS from "crypto-js";
 
-import User from "../src/db/models/user.model.js"; // Import User model
+import User from "../../src/db/models/user.model.js"; // Import User model
 
 
 

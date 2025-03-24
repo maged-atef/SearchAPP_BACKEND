@@ -1,5 +1,7 @@
-import User from "../../src/db/models/user.model.js"
-import Company from "../../src/db/models/company.model.js"
+import Company from "../../db/models/company.model.js";
+import User from "../../db/models/user.model.js";
+
+
 
 export const finduser_GraphQL = async () => {
     const data = await User.find({});

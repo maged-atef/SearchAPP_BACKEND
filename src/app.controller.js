@@ -7,7 +7,7 @@ import msgRouter from './modules/message/msg.controller.js'
 
 
 // * ====> import Db connection
-import connectiontDB from './src/db/connectionDB.js';
+import connectiontDB from '../src/db/connectionDB.js';
 import helmet from 'helmet';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit'
@@ -15,7 +15,7 @@ import { createHandler } from 'graphql-http/lib/use/express';
 import { schema } from './modules/graphQL/Schema.graphQL.js';
 import passport from "passport";
 import session from "express-session";
-import './src/Utility/passport.js'
+import '../src/Utility/cronOTP.js'
 import { sendMail } from './service/email.js';
 
 // *---> Start App Here
