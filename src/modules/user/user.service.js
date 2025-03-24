@@ -190,12 +190,13 @@ export const getAcc = asyncHandler(async (req, res, next) => {
     if (!user) {
         return next(new Error("User not found"));
     }
+    user.mobileNumber = CryptoJS.AES.decrypt(user.mobileNumber, process.env.SECRETKEY).toString(CryptoJS.enc.Utf8)
 
-    if (user.deletedAt != null) {
+    if (!user.deletedAt == null) {
         return res.status(400).json({ success: false, msg: 'this account has been deleted' , Deleted_DATA: user })
     }
 
-    user.mobileNumber = CryptoJS.AES.decrypt(user.mobileNumber, process.env.SECRETKEY).toString(CryptoJS.enc.Utf8)
+ 
     res.status(200).json(user);
 });
 
