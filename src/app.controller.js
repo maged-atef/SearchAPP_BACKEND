@@ -79,6 +79,10 @@ export const bootstrap = async (app, express) => {
 
    
     // ^Main Router
+    app.get('/',async(req, res, next)=>{
+        res.status(200).json({success:true , msg: "Welcome in Home Page"})
+        next() 
+    })
     app.use('/user', userRouter);
     app.use('/job', jobRouter);
     app.use('/company', companyRouter);
