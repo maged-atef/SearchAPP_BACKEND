@@ -191,7 +191,7 @@ export const getAcc = asyncHandler(async (req, res, next) => {
         return next(new Error("User not found"));
     }
 
-    if (user.deletedAt !== null) {
+    if (user.deletedAt != null) {
         return res.status(400).json({ success: false, msg: 'this account has been deleted' , Deleted_DATA: user })
     }
 
