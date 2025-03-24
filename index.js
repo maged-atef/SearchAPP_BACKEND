@@ -1,11 +1,11 @@
 // *===> import Express, Bootstrap
 import express from 'express';
 import { bootstrap } from './src/app.controller.js';
-import './db/connectionDB.js';
+import './src/db/connectionDB.js';
 import './Utility/cronOTP.js'
 import { Server } from 'socket.io';
 import jwt from 'jsonwebtoken'
-import User from './db/models/user.model.js';
+import User from './src/db/models/user.model.js';
 
 
 

@@ -7,7 +7,7 @@ import msgRouter from './modules/message/msg.controller.js'
 
 
 // * ====> import Db connection
-import connectiontDB from './db/connectionDB.js';
+import connectiontDB from './src/db/connectionDB.js';
 import helmet from 'helmet';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit'
