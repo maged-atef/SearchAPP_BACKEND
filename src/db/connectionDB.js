@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import '../Utility/cronOTP.js'
+import '../src/Utility/cronOTP.js'
 //* Connect to Db
 const connectiontDB = async () => {
     return await mongoose.connect(process.env.MONGODB_URI)

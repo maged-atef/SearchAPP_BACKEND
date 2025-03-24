@@ -15,7 +15,7 @@ import { createHandler } from 'graphql-http/lib/use/express';
 import { schema } from './modules/graphQL/Schema.graphQL.js';
 import passport from "passport";
 import session from "express-session";
-import './Utility/passport.js'
+import './src/Utility/passport.js'
 import { sendMail } from './service/email.js';
 
 // *---> Start App Here

@@ -2,7 +2,7 @@
 import express from 'express';
 import { bootstrap } from './src/app.controller.js';
 import './src/db/connectionDB.js';
-import './Utility/cronOTP.js'
+import './src/Utility/cronOTP.js'
 import { Server } from 'socket.io';
 import jwt from 'jsonwebtoken'
 import User from './src/db/models/user.model.js';
