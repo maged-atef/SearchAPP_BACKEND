@@ -9,7 +9,7 @@ import User from "../../src/db/models/user.model.js"; // Import User model
  passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: ` ${process.env.CLOUD}user/google/callback`
+    callbackURL: ` ${process.env.CLOUD}auth/google/callback`
 }, async (accessToken, refreshToken, profile, done) => {
     try {
         let user = await User.findOne({ googleId: profile.id });
