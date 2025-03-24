@@ -186,7 +186,7 @@ export const getAcc = asyncHandler(async (req, res, next) => {
     let { id } = req.body
 
     const user = await User.findById(id).
-        select('firstName lastName mobileNumber email profilePic coverPic -_id');
+        select('firstName lastName mobileNumber email profilePic coverPic -_id deletedAt');
     if (!user) {
         return next(new Error("User not found"));
     }
