@@ -1,10 +1,10 @@
 import { sendMail } from "../../service/email.js";
-import Company from "../../../db/models/company.model.js";
-import Job from "../../../db/models/job.model.js";
+import Company from "../../db/models/company.model.js";
+import Job from "../../db/models/job.model.js";
 import CLOUD from "../../service/cloudinary.js";
-import Application from "../../../db/models/application.model.js";
+import Application from "../../db/models/application.model.js";
 import path from 'path'
-import application from "../../../db/models/application.model.js";
+import application from "../../db/models/application.model.js";
 import dotenv from 'dotenv'
 dotenv.config({path:path.resolve('.env')})
 console.log(path.resolve('.env'))

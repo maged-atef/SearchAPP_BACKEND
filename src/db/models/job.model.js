@@ -1,6 +1,6 @@
 
 import { Schema, model, Types } from "mongoose";
-import { jobLocation_option, level_option, workingTime_option } from "../../src/modules/job/jobValidation.js";
+import { jobLocation_option, level_option, workingTime_option } from "../../modules/job/jobValidation.js";
 
 
 // ^Variables Globale 

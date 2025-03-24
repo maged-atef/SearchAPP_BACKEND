@@ -1,7 +1,7 @@
 
 
 import { Schema, Types, model } from "mongoose";
-import { gnder_option, provider_option, role_option } from "../../src/modules/user/userValidation.js";
+import { gnder_option, provider_option, role_option } from "../../modules/user/userValidation.js";
 
 
 //^ variables global 
@@ -41,7 +41,7 @@ const userSchema = new Schema({
 }, { timestamps: true ,toJSON:{virtuals:true},toObject:{virtuals:true}});
 
 userSchema.virtual('username').get(function () {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.firstName}${this.lastName}`;
 })
 
 userSchema.post("deleteOne",{query: false , document: true}, async(doc, next)=>{

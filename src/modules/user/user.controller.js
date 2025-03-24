@@ -4,7 +4,7 @@ import { auth } from "../../middelware/auth.js";
 import { validate } from "../../middelware/validation.js";
 import * as userValidation from "./userValidation.js";
 import { multerLocal } from "../../service/multer.js";
-import "../../../Utility/passport.js";
+import "../../Utility/passport.js";
 import passport from "passport";
 import jwt from 'jsonwebtoken'
 
