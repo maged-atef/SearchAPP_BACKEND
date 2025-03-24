@@ -281,12 +281,16 @@ export const resetPassword = asyncHandler(async (req, res, next) => {
     if (!user) {
         return next(new Error("User not found"));
     }
-  const newpass =  bcrypt.hashSync(newPassword, 10); 
-    const update = await User.findOneAndUpdate({email: email , otp: otp},{passowrd:newpass, 
-        otp: undefined, otpExpiry: undefined
-    })
-    await update.save();
-    res.status(200).json({ msg: "Password reset successfully" });
+ try {
+    const newpass =  bcrypt.hashSync(newPassword, 10); 
+    user.password = newpass; 
+    user.otp = undefined; 
+    user.otpExpiry = undefined; 
+     await user.save();
+    return res.status(200).json({ msg: "Password reset successfully" });
+ } catch (error) {
+    res.status(400).json({error: error.message})
+ }
 });
 
 
